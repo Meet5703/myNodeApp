@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply Now</title>
+    <link href="/css/output.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/logo-removebg-preview.png"
+    />
+    <style>
+      body {
+        background-image: url(/assets/pxfuel.jpg);
+        background-size: cover;
+      }
+      #lft ul li {
+        background-color: #60a5fa;
+        padding: 14px;
+        border-radius: 16px;
+      }
+      #lft ul li:hover {
+        transition: all 0.2s ease-in;
+        box-shadow: 0 0 6px rgb(3, 3, 56);
+        color: rgb(187, 187, 235);
+        text-shadow: 0 0 3px blue;
+        cursor: pointer;
+      }
+      #btn {
+        text-shadow: 0 0 4px rgb(68, 0, 255);
+        color: rgb(255, 255, 255);
+        letter-spacing: 2px;
+      }
+      #Form label {
+        text-shadow: 0 0 5px aqua;
+        color: blue;
+      }
+      #head {
+        text-shadow: 0 0 4px cyan;
+      }
+    </style>
+  </head>
+  <body class="w-full h-screen box-border bg-no-repeat">
+    <div id="main" class="w-full h-screen flex flex-col">
+      <nav class="w-full h-16 bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div id="lft" class="w-full flex justify-between px-10 items-center">
+          <img
+            src="/assets/logo-removebg-preview.png"
+            alt="logo"
+            class="rounded-full w-16 h-16 object-cover"
+          />
+          <ul class="flex items-center space-x-6">
+            <li><a href="#">Apply Now</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        </div>
+        <div id="rht"></div>
+      </nav>
+      <div id="body" class="h-full w-full flex">
+        <div id="crousal" class="w-[40%] h-full">
+          <div
+            id="default-carousel"
+            class="relative w-full"
+            data-carousel="slide"
+          >
+            <!-- Carousel wrapper -->
+
+            <div
+              class="relative w-[20vw] h-56 overflow-hidden rounded-lg md:h-96 left-16 top-16"
+            >
+              <!-- Item 1 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQbFRbVa6VMF39LqZZu7-xJiH35akF0Ued3ubvbXxuQ&s"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 2 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://m.media-amazon.com/images/I/71u1Feegx3L._AC_UF894,1000_QL80_.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 3 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNLDwk1eJclMlpuRFuwvdp7FkwSlDGV90v9Yb9ahcRbZBl6w7Q4SMGnPCjdnawW4NEKAc"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 4 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://m.media-amazon.com/images/M/MV5BYjJlZDI4NTYtYjQzMi00ZmM0LWIxZDEtMzgwNTBjYjc4MTZlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+              <!-- Item 5 -->
+              <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img
+                  src="https://img.freepik.com/premium-psd/realistic-vertical-horror-movie-poster-flyer-template-design-psd_725102-4741.jpg?w=2000"
+                  class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Form" class="w-[60%] float-right h-4/5 mr-16 mt-4">
+          <form
+            action="/submitPayment"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div
+              class="bg-[#719ee25b] relative gap-6 w-[100%] grid grid-cols-8 mb-6 rounded-2xl px-6 py-[14px]"
+              style="backdrop-filter: blur(4px)"
+            >
+              <div
+                id="head-wraper"
+                class="col-span-8 bg-white rounded-xl flex items-center justify-center w-full"
+              >
+                <h1 id="head" class="text-2xl absolute">Apply Now</h1>
+              </div>
+              <div
+                class="flex flex-col w-full col-span-2 space-y-1 justify-center mr-7 gap-y-[33px] top-10"
+              >
+                <label
+                  for="Name"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Name</label
+                >
+                <label
+                  for="FatherName"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Father's Name</label
+                >
+                <label
+                  for="MotherName"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Mother's Name</label
+                >
+                <label
+                  for="Address"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Address</label
+                >
+                <label
+                  for="email"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Email</label
+                >
+                <label
+                  for="ActingRole"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Select Acting Role</label
+                >
+                <label
+                  for="MobileNumber"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Mobile Number</label
+                >
+                <label
+                  for="WhatsAppNumber"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >WhatsApp Number</label
+                >
+                <label
+                  for="VideoUpload"
+                  class="text-lg font-medium text-gray-900 dark:text-white"
+                  >Upload Video <br />(MP4 only, max 30s)</label
+                >
+              </div>
+              <div class="flex flex-col col-span-6 gap-y-6 items-start w-full">
+                <input
+                  type="text"
+                  id="Name"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-blue-200 rounded-lg w-full"
+                  placeholder="Enter Your Name"
+                  required
+                  name="Name"
+                />
+                <input
+                  type="text"
+                  id="FatherName"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-blue-200 rounded-lg w-full"
+                  placeholder="Enter Your Father's Name"
+                  required
+                  name="FatherName"
+                />
+                <input
+                  type="text"
+                  id="MotherName"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-blue-200 rounded-lg w-full"
+                  placeholder="Enter Your Mother's Name"
+                  required
+                  name="MotherName"
+                />
+                <input
+                  type="text"
+                  id="Address"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-blue-200 rounded-lg w-full"
+                  placeholder="Enter Your Address"
+                  required
+                  name="Address"
+                />
+                <input
+                  type="email"
+                  id="Address"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-blue-200 rounded-lg w-full"
+                  placeholder="Enter Your Address"
+                  required
+                  name="email"
+                />
+                <select
+                  id="ActingRole"
+                  class="bg-blue-200 rounded-lg w-full"
+                  required
+                  name="ActingRole"
+                >
+                  <option value="0">Select Role For Act</option>
+                  <option value="Lead Actor">Lead Actor</option>
+                  <option value="Lead Actress">Lead Actress</option>
+                  <option value="Side Actor">Side Actor</option>
+                  <option value="Side Actoress">Side Actoress</option>
+                  <option value="Comedian">Comedian</option>
+                  <option value="Dancer">Dancer</option>
+                  <option value="Stunt man">Stunt man</option>
+                  <option value="Music Composer">Music Composer</option>
+                  <option value="Director">Director</option>
+                  <option value="Villan">Villan</option>
+                </select>
+                <input
+                  type="number"
+                  id="MobileNumber"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-blue-200 rounded-lg w-full"
+                  placeholder="Enter Your Mobile Number"
+                  name="MobileNumber"
+                  required
+                />
+                <input
+                  type="number"
+                  id="WhatsAppNumber"
+                  aria-describedby="helper-text-explanation"
+                  class="bg-blue-200 rounded-lg w-full"
+                  placeholder="Enter Your WhatsApp Number"
+                  name="WhatsAppNumber"
+                  required
+                />
+                <input
+                  type="file"
+                  name="VideoUpload"
+                  id="VideoUpload"
+                  accept=".mp4"
+                  required
+                />
+                <small id="fileHelp" class="text-sm text-gray-500"
+                  >Max file size: 30MB</small
+                >
+                <span id="error-message" class="text-red-600"></span>
+              </div>
+              <div
+                class="col-span-8 p-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center w-full"
+              >
+                <button id="btn" class="w-full">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mt-14">
+        <div id="footer" class="w-full bg-gray-800 text-white py-8">
+          <div id="About" class="container mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">About</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
+              lectus vitae sem ullamcorper tincidunt.
+            </p>
+          </div>
+          <div id="contact" class="container mx-auto mt-8">
+            <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+            <ul>
+              <li class="mb-2">Email: example@example.com</li>
+              <li class="mb-2">Phone: +1234567890</li>
+              <li>Address: 123, Street Name, City, Country</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/js/fileValidation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+  </body>
+</html>

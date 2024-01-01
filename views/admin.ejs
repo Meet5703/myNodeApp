@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin Panel</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Admin Panel - Submitted Data</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Father's Name</th>
+          <th>Mother's Name</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>WhatsApp Number</th>
+          <th>Acting Role</th>
+          <th>Video</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% submissions.forEach(submission => { %>
+        <tr>
+          <td><%= submission.Name %></td>
+          <td><%= submission.FatherName %></td>
+          <td><%= submission.MotherName %></td>
+          <td><%= submission.Address %></td>
+          <td><%= submission.email %></td>
+          <!-- Use correct field name for email -->
+          <td><%= submission.MobileNumber %></td>
+          <!-- Use correct field name for phone number -->
+          <td><%= submission.WhatsAppNumber %></td>
+          <td><%= submission.ActingRole %></td>
+          <td>
+            <% if (submission.VideoUpload) { %>
+            <a href="<%= submission.VideoUpload %>" target="_blank" download
+              >Download</a
+            >
+            <% } else { %> No video uploaded <% } %>
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
