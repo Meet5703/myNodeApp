@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.post("/payment", upload.single("VideoUpload"), async (req, res) => {
+app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
   try {
     const {
       Name,
@@ -89,7 +89,7 @@ app.post("/payment", upload.single("VideoUpload"), async (req, res) => {
     const savedSubmission = await newSubmission.save();
 
     console.log("Submission saved:", savedSubmission);
-    res.redirect("/payment");
+    res.render("/payment");
   } catch (err) {
     console.error(err);
     res.status(500).send("Server Error");
