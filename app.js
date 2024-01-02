@@ -44,6 +44,9 @@ const upload = multer({ storage: storage });
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
+app.get("/payment", (req, res) => {
+  res.render("payment");
+});
 
 app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
   try {
