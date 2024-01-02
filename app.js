@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
-app.post("/payment", upload.single("VideoUpload"), async (req, res) => {
+app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
   try {
     const {
       Name,
