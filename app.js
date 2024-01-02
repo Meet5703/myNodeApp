@@ -45,6 +45,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/payment", (req, res) => {
+  res.render("payment");
+});
 app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
   try {
     const {
@@ -56,7 +59,6 @@ app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
       ActingRole,
       MobileNumber,
       WhatsAppNumber,
-      // ... other necessary fields
     } = req.body;
 
     const requiredFields = [
@@ -69,9 +71,12 @@ app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
       MobileNumber,
       WhatsAppNumber,
     ];
+
     if (requiredFields.some((field) => !field)) {
       return res.status(400).send("Missing required fields");
     }
+
+    // Add more validation (email format, phone number format, etc.) if needed
 
     const newSubmission = new Submission({
       Name,
@@ -83,21 +88,16 @@ app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
       MobileNumber,
       WhatsAppNumber,
       VideoUpload: req.file ? req.file.path : null,
-      // ... other necessary fields
     });
 
     const savedSubmission = await newSubmission.save();
 
     console.log("Submission saved:", savedSubmission);
-    res.render("/payment");
+    res.redirect("/payment");
   } catch (err) {
     console.error(err);
     res.status(500).send("Server Error");
   }
-});
-
-app.get("/payment", (req, res) => {
-  res.render("payment");
 });
 
 app.get("/admin", async (req, res) => {
