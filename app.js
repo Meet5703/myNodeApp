@@ -18,7 +18,10 @@ app.use(
 );
 
 mongoose
-  .connect(process.env.MONGODB_URI, {})
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => {
     console.log("Connected to MongoDB");
   })
@@ -45,6 +48,7 @@ app.get("/", (req, res) => {
 app.get("/payment", (req, res) => {
   res.render("payment");
 });
+
 app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
   try {
     const {
@@ -56,6 +60,7 @@ app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
       ActingRole,
       MobileNumber,
       WhatsAppNumber,
+      // Add other necessary fields here
     } = req.body;
 
     const requiredFields = [
@@ -85,6 +90,7 @@ app.post("/submitPayment", upload.single("VideoUpload"), async (req, res) => {
       MobileNumber,
       WhatsAppNumber,
       VideoUpload: req.file ? req.file.path : null,
+      // Add other necessary fields here
     });
 
     const savedSubmission = await newSubmission.save();
