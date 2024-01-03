@@ -14,7 +14,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./public/css/iutput.css -o ./public/css/output.css",
+    "build": "npx tailwindcss -i ./public/css/input.css -o ./public/css/output.css",
     "start": "node app.js"
   },
   "keywords": [],
